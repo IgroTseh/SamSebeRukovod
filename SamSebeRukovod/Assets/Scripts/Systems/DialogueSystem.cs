@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour {
@@ -7,6 +7,9 @@ public class DialogueSystem : MonoBehaviour {
     private int _currentDialogueIndex;
 
     private IDialogue[] _dialogues;
+
+    [Header("Result UI")]
+    [SerializeField] private GameObject resultUIPanel;
 
     private void Start()
     {
@@ -43,8 +46,7 @@ public class DialogueSystem : MonoBehaviour {
 
             if (_currentDialogueIndex >= _dialogues.Length)
             {
-                EventBus.OnDialogueEnd?.Invoke();
-                SceneManager.LoadScene("MiniGame");
+                ShowResult();
                 return;
             }
 
@@ -52,20 +54,41 @@ public class DialogueSystem : MonoBehaviour {
             return;
         }
 
-        // вызов события для UI
         EventBus.OnNextNode?.Invoke(_currentNode);
     }
 
-    // вызывается кнопкой в UI, передаём очки
     public void SelectOption(float score)
     {
         GameState.RiskScore += score;
         ShowNextNode();
     }
 
-    // Если нет опций, кнопка Далее вызывает этот метод
     public void NextNode()
     {
         ShowNextNode();
     }
+
+    private void ShowResult()
+    {
+        if (resultUIPanel != null)
+        {
+            resultUIPanel.SetActive(true); // Р°РєС‚РёРІРёСЂСѓРµРј РїР°РЅРµР»СЊ
+
+            var resultUI = resultUIPanel.GetComponent<DialogueResultUI>();
+            if (resultUI != null)
+            {
+                resultUI.ShowResult();     // РѕР±РЅРѕРІР»СЏРµРј С‚РµРєСЃС‚
+            }
+            else
+            {
+                Debug.LogError("DialogueResultUI РЅРµ РЅР°Р№РґРµРЅ РЅР° РїР°РЅРµР»Рё resultUIPanel");
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene("MiniGame");
+        }
+    }
+
+
 }
