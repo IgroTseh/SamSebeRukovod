@@ -8,12 +8,12 @@ public class AmbitiousFriendDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Ты выглядишь подавленным. Я могу как-то помочь?", Options = null },
-            new DialogueNode { SpeakerText = "Ничего такого. Просто меня не взяли в художественную школу.", Options = null },
-            new DialogueNode { SpeakerText = "Что же мне делать? Я же хотел прославиться!", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Ты выглядишь подавленным. Я могу как-то помочь?", Options = null },
+            new DialogueNode { SpeakerText = "Друг: Ничего такого. Просто меня не взяли в художественную школу.", Options = null },
+            new DialogueNode { SpeakerText = "Друг: Я же хотел прославиться! Искусство — это моя жизнь!", Options = null },
             new DialogueNode
             {
-                SpeakerText = "А ты бы рискнул?",
+                SpeakerText = "Друг: Что же мне делать??",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption { Text="Главное не иди в политику.", Score=0.3f },

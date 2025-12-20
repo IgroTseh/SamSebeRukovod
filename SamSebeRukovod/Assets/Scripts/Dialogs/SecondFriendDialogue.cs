@@ -11,26 +11,26 @@ public class SecondFriendDialogue : IDialogue {
             // Игрок
             new DialogueNode
             {
-                SpeakerText = "Привет...это снова я...",
+                SpeakerText = "Друг: Привет...это снова я...",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Привет, дружище. Как оно?",
+                SpeakerText = "Вы: Привет, дружище. Как оно?",
                 Options = null
             },
 
             // Друг
             new DialogueNode
             {
-                SpeakerText = "Устал дико. Менеджер дурак. Дедлайны горят, премии нет. Хочу всё бросить. ",
+                SpeakerText = "Друг: Устал дико. Менеджер дурак. Дедлайны горят, премии нет. Хочу всё бросить. ",
                 Options = null
             },
 
             // Вопрос
             new DialogueNode
             {
-                SpeakerText = "Но что поделать. Мне хотя бы платят нормально...",
+                SpeakerText = "Друг: Но что поделать. Мне хотя бы платят нормально...",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption

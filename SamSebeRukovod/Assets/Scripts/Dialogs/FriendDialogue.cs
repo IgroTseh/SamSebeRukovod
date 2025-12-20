@@ -11,31 +11,31 @@ public class FriendDialogue : IDialogue {
             // Игрок
             new DialogueNode
             {
-                SpeakerText = "Привет, друг. Слышал ты теперь предприниматель.  Хах, должно быть поинтереснее, чем там в офисе.",
+                SpeakerText = "Друг: Привет, друг. Слышал ты теперь предприниматель.  Хах, должно быть поинтереснее, чем там в офисе.",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Менеджер опять лютует. А что это у тебя на прилавке? ",
+                SpeakerText = "Доруг: Менеджер опять лютует. А что это у тебя на прилавке? ",
                 Options = null
             },
 
             // Друг
             new DialogueNode
             {
-                SpeakerText = "Бипки.",
+                SpeakerText = "Вы: Бипки.",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Я произвожу и продаю бипки.",
+                SpeakerText = "Вы: Я произвожу и продаю бипки.",
                 Options = null
             },
 
             // Вопрос
             new DialogueNode
             {
-                SpeakerText = "И … зачем ты этим занимаешься? ",
+                SpeakerText = "Друг: И … зачем ты этим занимаешься? ",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption

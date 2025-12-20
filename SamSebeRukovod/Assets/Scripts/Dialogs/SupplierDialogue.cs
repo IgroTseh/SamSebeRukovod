@@ -8,15 +8,15 @@ public class SupplierDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Здравствуйте. Давайте продлим договор на поставки!", Options = null },
-            new DialogueNode { SpeakerText = "Я вам ещё много товара доставлю!", Options = null },
-            new DialogueNode { SpeakerText = "Здравствуйте. Новый договр — дело-то хорошее.", Options = null },
-            new DialogueNode { SpeakerText = "Но вы мне уже задерживаете партию форм для бибок на 3 месяца.", Options = null },
-            new DialogueNode { SpeakerText = "Я несу убытки!", Options = null },
-            new DialogueNode { SpeakerText = "Мы тут честные уважаемые люди. Всё будет. Даю слово.", Options = null },
+            new DialogueNode { SpeakerText = "Поставщик: Здравствуйте. Давайте продлим договор на поставки!", Options = null },
+            new DialogueNode { SpeakerText = "Поставщик: Я вам ещё много товара доставлю!", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Здравствуйте. Новый договр — дело-то хорошее.", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Но вы мне уже задерживаете партию форм для бибок на 3 месяца.", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Я несу убытки!", Options = null },
+            new DialogueNode { SpeakerText = "Поставщик: Мы тут честные уважаемые люди. Всё будет. Даю слово.", Options = null },
             new DialogueNode
             {
-                SpeakerText = "А если вы откажитесь...Не завидую я вашему дельцу.",
+                SpeakerText = "Поставщик: А если вы откажитесь...Не завидую я вашему дельцу.",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption { Text="Купи бипку. Целую партию. Ту самую, что задерживается. Тогда поговорим.", Score=0.3f },

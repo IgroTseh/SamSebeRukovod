@@ -8,12 +8,12 @@ public class FNSDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Здравствуйте.", Options = null },
-            new DialogueNode { SpeakerText = "Вечер добрый. А вы кто?", Options = null },
-            new DialogueNode { SpeakerText = "Я из федеральной налоговй службы. Ведь скоро конец года...", Options = null },
+            new DialogueNode { SpeakerText = "Налоговая: Здравствуйте.", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Вечер добрый. А вы кто?", Options = null },
+            new DialogueNode { SpeakerText = "Налоговая: Я из федеральной налоговй службы. Ведь скоро конец года...", Options = null },
             new DialogueNode
             {
-                SpeakerText = "Как будете платить налоги?",
+                SpeakerText = "Налоговая: Как будете платить налоги?",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption { Text="Вы думали, я собираюсь платить налоги?", Score=0f },

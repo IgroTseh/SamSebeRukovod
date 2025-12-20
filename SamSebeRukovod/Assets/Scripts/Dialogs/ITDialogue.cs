@@ -8,12 +8,13 @@ public class ITDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Хай! А у вас есть эко-френдли бабл-ти с миндалевым молоком и стевией?", Options = null },
-            new DialogueNode { SpeakerText = "Эм.. Нет. Вы ошиблись адресом. Мы бипки продаем.", Options = null },
-            new DialogueNode { SpeakerText = "Бибки? Как классно! Кстати как раз недавно делал проект для подобного производства...", Options = null },
+            new DialogueNode { SpeakerText = "Айтишник: Хай! А у вас есть эко-френдли бабл-ти с миндалевым молоком и стевией?", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Эм.. Нет. Вы ошиблись адресом. Мы бипки продаем.", Options = null },
+            new DialogueNode { SpeakerText = "Айтишник: Бибки? Как классно! Кстати как раз недавно делал проект для подобного производства...", Options = null },
+			new DialogueNode { SpeakerText = "Айтишник: Отвязные бипки! Мне нравится ваш магаз!", Options = null },
             new DialogueNode
             {
-                SpeakerText = "А вы как за производством вообще следите? Могу помочь с автоматизацией, если что...",
+                SpeakerText = "Айтишник: А вы как за производством вообще следите? Могу помочь с автоматизацией, если что...",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption { Text="Давай-ка настроим мне CRM, ERP и аналитику", Score=1f },

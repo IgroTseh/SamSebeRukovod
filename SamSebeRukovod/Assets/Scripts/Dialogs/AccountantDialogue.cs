@@ -8,15 +8,15 @@ public class AccountantDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Ало? Да. Здравствуйте.", Options = null },
-            new DialogueNode { SpeakerText = "Здравствуйте. Я ваш экономический консультат. И уменя предлоежние.", Options = null },
-            new DialogueNode { SpeakerText = "Вы продаете бипки за 500. Себестоимость 300. Почему не 700? ", Options = null },
-            new DialogueNode { SpeakerText = "Боюсь потерять клиентов.", Options = null },
-            new DialogueNode { SpeakerText = "Вы сейчас теряете не клиентов, а прибыль", Options = null },
-            new DialogueNode { SpeakerText = "Ваши бипки экологичны. Продавайте не товар, а «зелёный имидж»!", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Ало? Да. Здравствуйте.", Options = null },
+            new DialogueNode { SpeakerText = "Экономист: Здравствуйте. Я ваш экономический консультат. И уменя предлоежние.", Options = null },
+            new DialogueNode { SpeakerText = "Экономист: Вы продаете бипки за 500. Себестоимость 300. Почему не 700? ", Options = null },
+            new DialogueNode { SpeakerText = "Вы: Боюсь потерять клиентов.", Options = null },
+            new DialogueNode { SpeakerText = "Экономист: Вы сейчас теряете не клиентов, а прибыль", Options = null },
+            new DialogueNode { SpeakerText = "Экономист: Ваши бипки экологичны. Продавайте не товар, а «зелёный имидж»!", Options = null },
             new DialogueNode
             {
-                SpeakerText = "Как вам моё предложение?",
+                SpeakerText = "Экономист: Как вам моё предложение?",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption { Text="Идея — огонь! Так и сделаю! Купи бипку.", Score=0.6f },
