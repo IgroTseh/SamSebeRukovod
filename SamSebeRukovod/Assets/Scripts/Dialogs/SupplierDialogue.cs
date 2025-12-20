@@ -8,16 +8,21 @@ public class SupplierDialogue : IDialogue {
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Сроки важны.", Options = null },
+            new DialogueNode { SpeakerText = "Здравствуйте. Давайте продлим договор на поставки!", Options = null },
+            new DialogueNode { SpeakerText = "Я вам ещё много товара доставлю!", Options = null },
+            new DialogueNode { SpeakerText = "Здравствуйте. Новый договр — дело-то хорошее.", Options = null },
+            new DialogueNode { SpeakerText = "Но вы мне уже задерживаете партию форм для бибок на 3 месяца.", Options = null },
+            new DialogueNode { SpeakerText = "Я несу убытки!", Options = null },
+            new DialogueNode { SpeakerText = "Мы тут честные уважаемые люди. Всё будет. Даю слово.", Options = null },
             new DialogueNode
             {
-                SpeakerText = "Что будешь делать при срыве?",
+                SpeakerText = "А если вы откажитесь...Не завидую я вашему дельцу.",
                 Options = new DialogueOption[]
                 {
-                    new DialogueOption { Text="Коммуницировать", Score=1f },
-                    new DialogueOption { Text="Искать замену", Score=0.5f },
-                    new DialogueOption { Text="Надеяться", Score=0.25f },
-                    new DialogueOption { Text="Игнорировать", Score=0f }
+                    new DialogueOption { Text="Купи бипку. Целую партию. Ту самую, что задерживается. Тогда поговорим.", Score=0.3f },
+                    new DialogueOption { Text="Ясно. Пойду других поставщиков поищу.", Score=0.6f },
+                    new DialogueOption { Text="Ладно, подпишу. Мы же оба самозанятые. На одной стороне баррикады!", Score=0.0f },
+                    new DialogueOption { Text="Ало, юрист? Мне тут неустойку нужно взискать. А ещё упущенную выгоду. И моральный ущерб.", Score=0f }
                 }
             }
         };

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 9967916cdcd7fe34c98106b58c81a4f6
+guid: 8be35d14d7283014089dda7928ae0338
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4798120130826270232
-    second: FNStask_0
+      213: -8589878589573072523
+    second: FNS_0
+  - first:
+      213: 3470984211437272851
+    second: FNS_1
+  - first:
+      213: 2605687697078840467
+    second: FNS_2
+  - first:
+      213: -1888069429453973492
+    second: FNS_3
+  - first:
+      213: -6520693050844471536
+    second: FNS_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FNStask_0
+      name: FNS_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 0
-        width: 85
-        height: 86
+        width: 427
+        height: 689
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e9037c9927a96db0800000000000000
-      internalID: -4798120130826270232
+      spriteID: 57973c41fee9ac880800000000000000
+      internalID: -8589878589573072523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FNS_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 682
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f35bf00c96b2030800000000000000
+      internalID: 3470984211437272851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FNS_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 466
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c6dfba723492420800000000000000
+      internalID: 2605687697078840467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FNS_3
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 343
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c081f1a7bda3cc5e0800000000000000
+      internalID: -1888069429453973492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FNS_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 301
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f9e07e738d185a0800000000000000
+      internalID: -6520693050844471536
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FNStask_0: -4798120130826270232
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

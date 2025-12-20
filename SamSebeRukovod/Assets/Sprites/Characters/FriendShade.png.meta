@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9967916cdcd7fe34c98106b58c81a4f6
+guid: 9a9888672f72b9948ad8803eb5fba2c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4798120130826270232
-    second: FNStask_0
+      213: -1197517925115750448
+    second: FriendShade_0
+  - first:
+      213: 7805193143764098516
+    second: FriendShade_1
+  - first:
+      213: -970690672512533002
+    second: FriendShade_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FNStask_0
+      name: FriendShade_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 85
-        height: 86
+        x: 156
+        y: 668
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e9037c9927a96db0800000000000000
-      internalID: -4798120130826270232
+      spriteID: 0d71055bacf816fe0800000000000000
+      internalID: -1197517925115750448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendShade_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 643
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd9f518fcd915c60800000000000000
+      internalID: 7805193143764098516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendShade_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 375
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdfa1ee9f96782f0800000000000000
+      internalID: -970690672512533002
       vertices: []
       indices: 
       edges: []
@@ -147,8 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FNStask_0: -4798120130826270232
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

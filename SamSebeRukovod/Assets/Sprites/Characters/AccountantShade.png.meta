@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9967916cdcd7fe34c98106b58c81a4f6
+guid: d2f551e918e0b6b41936222bde08eb40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4798120130826270232
-    second: FNStask_0
+      213: 2484800176293574370
+    second: AccountantShade_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FNStask_0
+      name: AccountantShade_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 85
-        height: 86
+        x: 101
+        y: 70
+        width: 292
+        height: 552
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e9037c9927a96db0800000000000000
-      internalID: -4798120130826270232
+      spriteID: 2e67ec56898cb7220800000000000000
+      internalID: 2484800176293574370
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FNStask_0: -4798120130826270232
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

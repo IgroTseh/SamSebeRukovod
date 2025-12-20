@@ -9,16 +9,17 @@ public class FNSDialogue : IDialogue {
         _nodes = new List<DialogueNode>
         {
             new DialogueNode { SpeakerText = "Здравствуйте.", Options = null },
-            new DialogueNode { SpeakerText = "Вы знакомы с режимом самозанятости?", Options = null },
+            new DialogueNode { SpeakerText = "Вечер добрый. А вы кто?", Options = null },
+            new DialogueNode { SpeakerText = "Я из федеральной налоговй службы. Ведь скоро конец года...", Options = null },
             new DialogueNode
             {
                 SpeakerText = "Как будете платить налоги?",
                 Options = new DialogueOption[]
                 {
-                    new DialogueOption { Text="Через приложение", Score=1f },
-                    new DialogueOption { Text="Разберусь позже", Score=0.5f },
-                    new DialogueOption { Text="Пока не знаю", Score=0.25f },
-                    new DialogueOption { Text="Не буду", Score=0f }
+                    new DialogueOption { Text="Вы думали, я собираюсь платить налоги?", Score=0f },
+                    new DialogueOption { Text="Займусь этим за день до дедлайна...", Score=0.3f },
+                    new DialogueOption { Text="Лично приеду в налоговую.", Score=0.6f },
+                    new DialogueOption { Text="В приложении ФНС России.", Score=1f }
                 }
             }
         };

@@ -11,51 +11,46 @@ public class SecondFriendDialogue : IDialogue {
             // Игрок
             new DialogueNode
             {
-                SpeakerText = "Ну что, как у тебя дела?",
+                SpeakerText = "Привет...это снова я...",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Я тут кое-что пробую делать сам.",
+                SpeakerText = "Привет, дружище. Как оно?",
                 Options = null
             },
 
             // Друг
             new DialogueNode
             {
-                SpeakerText = "Серьёзно?..",
-                Options = null
-            },
-            new DialogueNode
-            {
-                SpeakerText = "Ну не знаю… Сейчас вообще не лучшее время.",
+                SpeakerText = "Устал дико. Менеджер дурак. Дедлайны горят, премии нет. Хочу всё бросить. ",
                 Options = null
             },
 
             // Вопрос
             new DialogueNode
             {
-                SpeakerText = "Ты уверен, что оно вообще того стоит?",
+                SpeakerText = "Но что поделать. Мне хотя бы платят нормально...",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption
                     {
-                        Text = "Да, риск оправдан",
+                        Text = "Потерпи. Пару лет, потом пару десятков, и вот уже пенсия!",
+                        Score = 0f
+                    },
+                    new DialogueOption
+                    {
+                        Text = "Ты крутой спец. Найди работу покруче! Например у меня.",
+                        Score = 0.3f
+                    },
+                    new DialogueOption
+                    {
+                        Text = "У тебя всегды был лучший маникюор! Открой свой салон!",
                         Score = 1f
                     },
                     new DialogueOption
                     {
-                        Text = "Посмотрим, как пойдёт",
-                        Score = 0.5f
-                    },
-                    new DialogueOption
-                    {
-                        Text = "Не уверен, но попробую",
-                        Score = 0.25f
-                    },
-                    new DialogueOption
-                    {
-                        Text = "Наверное, ты прав",
+                        Text = "Значит, можешь себе позволить бипку. Купи бипку.",
                         Score = 0f
                     }
                 }

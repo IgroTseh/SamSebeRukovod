@@ -11,52 +11,52 @@ public class FriendDialogue : IDialogue {
             // Игрок
             new DialogueNode
             {
-                SpeakerText = "Привет. Как ты?",
+                SpeakerText = "Привет, друг. Слышал ты теперь предприниматель.  Хах, должно быть поинтереснее, чем там в офисе.",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Ты всё ещё в офисе?",
+                SpeakerText = "Менеджер опять лютует. А что это у тебя на прилавке? ",
                 Options = null
             },
 
             // Друг
             new DialogueNode
             {
-                SpeakerText = "Да… всё там же.",
+                SpeakerText = "Бипки.",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Каждый день одно и то же. Уже подташнивает.",
+                SpeakerText = "Я произвожу и продаю бипки.",
                 Options = null
             },
 
             // Вопрос
             new DialogueNode
             {
-                SpeakerText = "А ты сам задумывался о чём-то своём?",
+                SpeakerText = "И … зачем ты этим занимаешься? ",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption
                     {
-                        Text = "Да, хочу попробовать своё дело",
-                        Score = 1f
-                    },
-                    new DialogueOption
-                    {
-                        Text = "Иногда думаю, но страшно",
-                        Score = 0.5f
-                    },
-                    new DialogueOption
-                    {
-                        Text = "Пока просто мысли",
-                        Score = 0.25f
-                    },
-                    new DialogueOption
-                    {
-                        Text = "Нет, стабильность важнее",
+                        Text = "Прост)",
                         Score = 0f
+                    },
+                    new DialogueOption
+                    {
+                        Text = "В офисе скучно. Он не отвечает моим амбициям",
+                        Score = 0.6f
+                    },
+                    new DialogueOption
+                    {
+                        Text = "Мне это нравится. ",
+                        Score = 0.3f
+                    },
+                    new DialogueOption
+                    {
+                        Text = " Я живу бибками. Это самореализация.",
+                        Score = 1f
                     }
                 }
             }
