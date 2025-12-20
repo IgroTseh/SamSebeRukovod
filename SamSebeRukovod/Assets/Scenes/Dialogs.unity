@@ -241,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -172.83806, y: -64.98711, z: -170.07275, w: -60.839024}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 266641505}
   - component: {fileID: 266641504}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Answers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,7 +597,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266641502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -606,11 +606,11 @@ RectTransform:
   - {fileID: 178267411}
   - {fileID: 227161476}
   - {fileID: 601049754}
-  m_Father: {fileID: 1516110656}
+  m_Father: {fileID: 509068698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -132}
+  m_AnchoredPosition: {x: 0, y: -285}
   m_SizeDelta: {x: 572.63, y: 324.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266641504
@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 509068698}
   - component: {fileID: 509068700}
   - component: {fileID: 509068699}
+  - component: {fileID: 509068701}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -818,6 +819,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 82283526}
+  - {fileID: 266641503}
   m_Father: {fileID: 1516110656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -863,6 +865,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509068697}
   m_CullTransparentMesh: 1
+--- !u!114 &509068701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509068697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722ac13468a5986469bac20eb958ee34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 82283527}
+  answerButtons:
+  - {fileID: 1292595957}
+  - {fileID: 178267412}
+  - {fileID: 227161477}
+  - {fileID: 601049755}
+  answerTexts:
+  - {fileID: 301038437}
+  - {fileID: 857618028}
+  - {fileID: 669484450}
+  - {fileID: 1399699682}
 --- !u!1 &601049753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1315911926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1901,7 +1926,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 509068698}
-  - {fileID: 266641503}
   - {fileID: 1315911926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

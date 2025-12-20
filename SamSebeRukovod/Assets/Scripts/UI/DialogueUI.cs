@@ -31,13 +31,35 @@ public class DialogueUI : MonoBehaviour {
     {
         dialogueText.text = node.SpeakerText;
 
-        if (node.Options == null)
+        if (node.Options == null || node.Options.Length == 0)
         {
-            HideAnswers();
+            ShowNextButtons(node);
         }
         else
         {
             ShowAnswers(node.Options);
+        }
+    }
+
+    private void ShowNextButtons(DialogueNode node)
+    {
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            if (i == 0)
+            {
+                answerButtons[i].gameObject.SetActive(true);
+                answerTexts[i].text = "Далее";
+
+                answerButtons[i].onClick.RemoveAllListeners();
+                answerButtons[i].onClick.AddListener(() =>
+                {
+                    _dialogueSystem.NextNode();
+                });
+            }
+            else
+            {
+                answerButtons[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -62,11 +84,5 @@ public class DialogueUI : MonoBehaviour {
                 answerButtons[i].gameObject.SetActive(false);
             }
         }
-    }
-
-    private void HideAnswers()
-    {
-        foreach (var btn in answerButtons)
-            btn.gameObject.SetActive(false);
     }
 }

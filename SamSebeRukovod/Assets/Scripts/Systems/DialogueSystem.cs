@@ -33,7 +33,7 @@ public class DialogueSystem : MonoBehaviour {
         ShowNextNode();
     }
 
-    private void ShowNextNode()
+    public void ShowNextNode()
     {
         _currentNode = _currentDialogue.GetNextNode();
 
@@ -52,12 +52,20 @@ public class DialogueSystem : MonoBehaviour {
             return;
         }
 
+        // вызов события для UI
         EventBus.OnNextNode?.Invoke(_currentNode);
     }
 
+    // вызывается кнопкой в UI, передаём очки
     public void SelectOption(float score)
     {
         GameState.RiskScore += score;
+        ShowNextNode();
+    }
+
+    // Если нет опций, кнопка Далее вызывает этот метод
+    public void NextNode()
+    {
         ShowNextNode();
     }
 }
