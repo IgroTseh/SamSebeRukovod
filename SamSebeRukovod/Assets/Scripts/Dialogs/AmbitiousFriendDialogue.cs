@@ -2,36 +2,32 @@ using System.Collections.Generic;
 
 public class AmbitiousFriendDialogue : IDialogue {
     private List<DialogueNode> _nodes;
-    private int _currentIndex;
+    private int _index;
 
     public AmbitiousFriendDialogue()
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Привет! Как дела с твоим проектом?", Options = null },
-            new DialogueNode { SpeakerText = "Ты ещё не ушёл из найма?", Options = null },
-
-            new DialogueNode { SpeakerText = "Да, думаю об этом. Уверен, что смогу.", Options = null },
-            new DialogueNode { SpeakerText = "Ты талантлив, пора пробовать!", Options = null },
-
+            new DialogueNode { SpeakerText = "Я уволился.", Options = null },
+            new DialogueNode { SpeakerText = "Решил рисовать и жить этим.", Options = null },
+            new DialogueNode { SpeakerText = "Да, страшно. Но иначе никак.", Options = null },
             new DialogueNode
             {
-                SpeakerText = "Почему бы не начать прямо сейчас?",
+                SpeakerText = "А ты бы рискнул?",
                 Options = new DialogueOption[]
                 {
-                    new DialogueOption { Text="Да, начинаю!", Score = 1f },
-                    new DialogueOption { Text="Подумаю ещё", Score = 0.25f },
-                    new DialogueOption { Text="Нет, слишком страшно", Score = 0f },
-                    new DialogueOption { Text="Начну по чуть-чуть", Score = 0.5f }
+                    new DialogueOption { Text="Да, без риска нет роста", Score=1f },
+                    new DialogueOption { Text="Если будет подушка", Score=0.5f },
+                    new DialogueOption { Text="Не сейчас", Score=0.25f },
+                    new DialogueOption { Text="Никогда", Score=0f }
                 }
             }
         };
-        _currentIndex = 0;
     }
 
     public DialogueNode GetNextNode()
     {
-        if (_currentIndex >= _nodes.Count) return null;
-        return _nodes[_currentIndex++];
+        if (_index >= _nodes.Count) return null;
+        return _nodes[_index++];
     }
 }

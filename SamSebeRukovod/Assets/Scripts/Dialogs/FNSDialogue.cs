@@ -2,36 +2,31 @@ using System.Collections.Generic;
 
 public class FNSDialogue : IDialogue {
     private List<DialogueNode> _nodes;
-    private int _currentIndex;
+    private int _index;
 
     public FNSDialogue()
     {
         _nodes = new List<DialogueNode>
         {
-            new DialogueNode { SpeakerText = "Здравствуйте! Нужно заполнять декларацию.", Options = null },
-            new DialogueNode { SpeakerText = "Все налоги должны быть уплачены вовремя.", Options = null },
-
-            new DialogueNode { SpeakerText = "Вы в курсе правил налоговой?", Options = null },
-            new DialogueNode { SpeakerText = "Иначе могут быть штрафы.", Options = null },
-
+            new DialogueNode { SpeakerText = "Здравствуйте.", Options = null },
+            new DialogueNode { SpeakerText = "Вы знакомы с режимом самозанятости?", Options = null },
             new DialogueNode
             {
-                SpeakerText = "Как вы планируете действовать?",
+                SpeakerText = "Как будете платить налоги?",
                 Options = new DialogueOption[]
                 {
-                    new DialogueOption { Text="Сделаю всё вовремя", Score = 1f },
-                    new DialogueOption { Text="Попробую разобраться потом", Score = 0.25f },
-                    new DialogueOption { Text="Пусть бухгалтер решает", Score = 0.5f },
-                    new DialogueOption { Text="Налоги? А зачем?", Score = 0f }
+                    new DialogueOption { Text="Через приложение", Score=1f },
+                    new DialogueOption { Text="Разберусь позже", Score=0.5f },
+                    new DialogueOption { Text="Пока не знаю", Score=0.25f },
+                    new DialogueOption { Text="Не буду", Score=0f }
                 }
             }
         };
-        _currentIndex = 0;
     }
 
     public DialogueNode GetNextNode()
     {
-        if (_currentIndex >= _nodes.Count) return null;
-        return _nodes[_currentIndex++];
+        if (_index >= _nodes.Count) return null;
+        return _nodes[_index++];
     }
 }

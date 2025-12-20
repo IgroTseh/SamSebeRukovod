@@ -1,40 +1,54 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour {
     private IDialogue _currentDialogue;
     private DialogueNode _currentNode;
-    private int _currentDialogueIndex = 0;
-    private IDialogue[] _allDialogues;
+    private int _currentDialogueIndex;
 
-    public void StartDialogues(IDialogue[] dialogues)
+    private IDialogue[] _dialogues;
+
+    private void Start()
     {
-        GameState.Reset();
-        _allDialogues = dialogues;
+        _dialogues = new IDialogue[]
+        {
+            new FriendDialogue(),
+            new AmbitiousFriendDialogue(),
+            new FNSDialogue(),
+            new ITDialogue(),
+            new CompetitorDialogue(),
+            new AccountantDialogue(),
+            new SecondFriendDialogue(),
+            new SupplierDialogue(),
+            new ClientDialogue()
+        };
+
         _currentDialogueIndex = 0;
-        StartDialogue(_allDialogues[_currentDialogueIndex]);
+        StartDialogue(_dialogues[_currentDialogueIndex]);
     }
 
-    void StartDialogue(IDialogue dialogue)
+    private void StartDialogue(IDialogue dialogue)
     {
         _currentDialogue = dialogue;
         ShowNextNode();
     }
 
-    public void ShowNextNode()
+    private void ShowNextNode()
     {
         _currentNode = _currentDialogue.GetNextNode();
 
         if (_currentNode == null)
         {
             _currentDialogueIndex++;
-            if (_currentDialogueIndex < _allDialogues.Length)
-            {
-                StartDialogue(_allDialogues[_currentDialogueIndex]);
-            }
-            else
+
+            if (_currentDialogueIndex >= _dialogues.Length)
             {
                 EventBus.OnDialogueEnd?.Invoke();
+                SceneManager.LoadScene("MiniGame");
+                return;
             }
+
+            StartDialogue(_dialogues[_currentDialogueIndex]);
             return;
         }
 

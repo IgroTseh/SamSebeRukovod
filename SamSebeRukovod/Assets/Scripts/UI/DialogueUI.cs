@@ -1,10 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour {
-    public TMP_Text dialogueText;
-    public Button[] optionButtons;
+    [Header("Text")]
+    [SerializeField] private TMP_Text dialogueText;
+
+    [Header("Answer Buttons")]
+    [SerializeField] private Button[] answerButtons;
+    [SerializeField] private TMP_Text[] answerTexts;
 
     private DialogueSystem _dialogueSystem;
 
@@ -15,32 +19,54 @@ public class DialogueUI : MonoBehaviour {
 
     private void OnEnable()
     {
-        EventBus.OnNextNode += UpdateUI;
+        EventBus.OnNextNode += ShowNode;
     }
 
     private void OnDisable()
     {
-        EventBus.OnNextNode -= UpdateUI;
+        EventBus.OnNextNode -= ShowNode;
     }
 
-    void UpdateUI(DialogueNode node)
+    private void ShowNode(DialogueNode node)
     {
         dialogueText.text = node.SpeakerText;
 
-        for (int i = 0; i < optionButtons.Length; i++)
+        if (node.Options == null)
         {
-            if (node.Options != null && i < node.Options.Length)
+            HideAnswers();
+        }
+        else
+        {
+            ShowAnswers(node.Options);
+        }
+    }
+
+    private void ShowAnswers(DialogueOption[] options)
+    {
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            if (i < options.Length)
             {
-                optionButtons[i].gameObject.SetActive(true);
-                optionButtons[i].GetComponentInChildren<TMP_Text>().text = node.Options[i].Text;
-                float score = node.Options[i].Score;
-                optionButtons[i].onClick.RemoveAllListeners();
-                optionButtons[i].onClick.AddListener(() => _dialogueSystem.SelectOption(score));
+                answerButtons[i].gameObject.SetActive(true);
+                answerTexts[i].text = options[i].Text;
+
+                float score = options[i].Score;
+                answerButtons[i].onClick.RemoveAllListeners();
+                answerButtons[i].onClick.AddListener(() =>
+                {
+                    _dialogueSystem.SelectOption(score);
+                });
             }
             else
             {
-                optionButtons[i].gameObject.SetActive(false);
+                answerButtons[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    private void HideAnswers()
+    {
+        foreach (var btn in answerButtons)
+            btn.gameObject.SetActive(false);
     }
 }

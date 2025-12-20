@@ -1,61 +1,61 @@
 using System.Collections.Generic;
 
-public class SecondFriendDialogue : IDialogue {
+public class FriendDialogue : IDialogue {
     private List<DialogueNode> _nodes;
     private int _index;
 
-    public SecondFriendDialogue()
+    public FriendDialogue()
     {
         _nodes = new List<DialogueNode>
         {
             // Игрок
             new DialogueNode
             {
-                SpeakerText = "Ну что, как у тебя дела?",
+                SpeakerText = "Привет. Как ты?",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Я тут кое-что пробую делать сам.",
+                SpeakerText = "Ты всё ещё в офисе?",
                 Options = null
             },
 
             // Друг
             new DialogueNode
             {
-                SpeakerText = "Серьёзно?..",
+                SpeakerText = "Да… всё там же.",
                 Options = null
             },
             new DialogueNode
             {
-                SpeakerText = "Ну не знаю… Сейчас вообще не лучшее время.",
+                SpeakerText = "Каждый день одно и то же. Уже подташнивает.",
                 Options = null
             },
 
             // Вопрос
             new DialogueNode
             {
-                SpeakerText = "Ты уверен, что оно вообще того стоит?",
+                SpeakerText = "А ты сам задумывался о чём-то своём?",
                 Options = new DialogueOption[]
                 {
                     new DialogueOption
                     {
-                        Text = "Да, риск оправдан",
+                        Text = "Да, хочу попробовать своё дело",
                         Score = 1f
                     },
                     new DialogueOption
                     {
-                        Text = "Посмотрим, как пойдёт",
+                        Text = "Иногда думаю, но страшно",
                         Score = 0.5f
                     },
                     new DialogueOption
                     {
-                        Text = "Не уверен, но попробую",
+                        Text = "Пока просто мысли",
                         Score = 0.25f
                     },
                     new DialogueOption
                     {
-                        Text = "Наверное, ты прав",
+                        Text = "Нет, стабильность важнее",
                         Score = 0f
                     }
                 }
