@@ -47,7 +47,7 @@ public class DialogSpriteClickUpdater : MonoBehaviour {
                 break;
 
             case 28: // Поставщик
-                ChangeOtherSpeakerSprite(16);
+                ChangeOtherSpeakerSprite(3);
                 break;
 
             case 32: // Покупатель

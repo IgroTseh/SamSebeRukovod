@@ -42,8 +42,8 @@ public class GameManager : MonoBehaviour {
 
     private void UpdateUI()
     {
-        if (HealthText != null) HealthText.text = "Health: " + Health;
-        if (ProfitText != null) ProfitText.text = "Profit: " + Profit;
+        if (HealthText != null) HealthText.text = "Здоровье: " + Health;
+        if (ProfitText != null) ProfitText.text = "Прибыль: " + Profit;
     }
 
     private void EndGame()

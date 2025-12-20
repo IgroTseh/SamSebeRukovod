@@ -25,11 +25,11 @@ public class DialogueResultUI : MonoBehaviour {
         float score = GameState.RiskScore;
         string text;
 
-        if (score >= 1.75f)
+        if (score >= 6.75f)
             text = "Да вы прирождённая акула бизнеса!!";
-        else if (score >= 1f)
+        else if (score >= 4.25f)
             text = "Кажется, вы можете попробовать открыть своё дело.";
-        else if (score > 0f)
+        else if (score > 2.15f)
             text = "В вас есть задатки предпринимателя, но многое будет неприятно. Есть только один способ проверить — попробовать!";
         else
             text = "Кажется, вам не особо это надо) Вы слишком крутой спец, и без вас вашему боссу придётся туго.";
