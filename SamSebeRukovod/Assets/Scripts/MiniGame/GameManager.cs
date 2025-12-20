@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
 
     public int Health = 5;
-    public int Profit = 0;
+    public static int Profit = 0;
     public int ProfitToWin = 20;
 
     [Header("UI")]
@@ -57,6 +57,14 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Проигрыш. Нужно набраться сил.");
         }
 
-        SceneManager.LoadScene("MainMenu"); // например, возвращаем на меню
+        SaveProfit();
+        SceneManager.LoadScene("Ending");
+
+    }
+
+    public void SaveProfit()
+    {
+        PlayerPrefs.SetInt("Profit", Profit); 
+        PlayerPrefs.Save();
     }
 }
